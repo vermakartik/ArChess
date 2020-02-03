@@ -1,0 +1,61 @@
+{
+  animations: [
+    {
+      path: 'sampledata/chess_piece_set/rook_black.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'Material.004',
+      parameters: [
+        {
+          baseColor: [
+            0.188443,
+            0.132018,
+            0.069135000000000002,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/chess_piece_set/rook_black.fbx',
+    name: 'rook_black',
+    recenter: 'root',
+  },
+  version: '0.54:2',
+}

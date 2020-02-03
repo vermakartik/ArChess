@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.mch.arkoted"
+        minSdkVersion 28
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.14.0"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+}
+
+
+sceneform.asset('sampledata/desto.fbx',
+        'default',
+        'sampledata/desto.sfa',
+        'src/main/res/raw/desto')
+
+sceneform.asset('sampledata/posert.fbx',
+        'default',
+        'sampledata/posert.sfa',
+        'src/main/res/raw/posert')
+
+sceneform.asset('sampledata/chess_piece_set/bishop_black.fbx',
+        'default',
+        'sampledata/chess_piece_set/bishop_black.sfa',
+        'src/main/res/raw/bishop_black')
+
+sceneform.asset('sampledata/chess_piece_set/king_black.fbx',
+        'default',
+        'sampledata/chess_piece_set/king_black.sfa',
+        'src/main/res/raw/king_black')
+
+sceneform.asset('sampledata/chess_piece_set/king_white.fbx',
+        'default',
+        'sampledata/chess_piece_set/king_white.sfa',
+        'src/main/res/raw/king_white')
+
+sceneform.asset('sampledata/chess_piece_set/knight_black.fbx',
+        'default',
+        'sampledata/chess_piece_set/knight_black.sfa',
+        'src/main/res/raw/knight_black')
+
+sceneform.asset('sampledata/chess_piece_set/knight_white.fbx',
+        'default',
+        'sampledata/chess_piece_set/knight_white.sfa',
+        'src/main/res/raw/knight_white')
+
+sceneform.asset('sampledata/chess_piece_set/pawn_black.fbx',
+        'default',
+        'sampledata/chess_piece_set/pawn_black.sfa',
+        'src/main/res/raw/pawn_black')
+
+sceneform.asset('sampledata/chess_piece_set/pawn_white.fbx',
+        'default',
+        'sampledata/chess_piece_set/pawn_white.sfa',
+        'src/main/res/raw/pawn_white')
+
+sceneform.asset('sampledata/chess_piece_set/queen_black.fbx',
+        'default',
+        'sampledata/chess_piece_set/queen_black.sfa',
+        'src/main/res/raw/queen_black')
+
+sceneform.asset('sampledata/chess_piece_set/queen_white.fbx',
+        'default',
+        'sampledata/chess_piece_set/queen_white.sfa',
+        'src/main/res/raw/queen_white')
+
+sceneform.asset('sampledata/chess_piece_set/rook_black.fbx',
+        'default',
+        'sampledata/chess_piece_set/rook_black.sfa',
+        'src/main/res/raw/rook_black')
+
+sceneform.asset('sampledata/chess_piece_set/rook_white.fbx',
+        'default',
+        'sampledata/chess_piece_set/rook_white.sfa',
+        'src/main/res/raw/rook_white')
+
+sceneform.asset('sampledata/chess_piece_set/bishop_white.fbx',
+        'default',
+        'sampledata/chess_piece_set/bishop_white.sfa',
+        'src/main/res/raw/bishop_white')
+
+sceneform.asset('sampledata/chess_piece_set/chess_board.fbx',
+        'default',
+        'sampledata/chess_piece_set/chess_board.sfa',
+        'src/main/res/raw/chess_board')
+
+sceneform.asset('sampledata/chess_piece_set/cover.fbx',
+        'default',
+        'sampledata/chess_piece_set/cover.sfa',
+        'src/main/res/raw/cover')

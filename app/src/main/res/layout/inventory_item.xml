@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="72dp"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center"
+    android:layout_margin="4dp"
+    android:background="@drawable/inventory_item_drawable"
+    android:id="@+id/ll_inv_item">
+
+    <ImageView
+        android:id="@+id/iv_inventory_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/chest"
+        />
+
+    <TextView
+        android:id="@+id/tv_inventory_desc_one_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:text="this is a demo text that will extend to maximum of two lines"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"/>
+
+</LinearLayout>
